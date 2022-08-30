@@ -19,7 +19,7 @@ public class AeronaveService{
     {
         
 
-        var aeronave = new Aeronave(dados.Fabricante, dados.Modelo, dados.Codigo);
+        var aeronave = new Aeronave(dados.Fabricante, dados.Modelo, dados.Codigo,dados.Tipo);
 
         _context.Add(aeronave);
         _context.SaveChanges();
@@ -29,7 +29,8 @@ public class AeronaveService{
             aeronave.Id,
             aeronave.Fabricante,
             aeronave.Modelo,
-            aeronave.Codigo
+            aeronave.Codigo,
+            aeronave.Tipo
         );
     } 
 

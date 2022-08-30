@@ -34,13 +34,4 @@ public class VoeAirlinesContext:DbContext{
 
     }
 
-
-
-/*
-     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder ){
-        //nesse método definimos a string de conexão
-        optionsBuilder.UseSqlServer(_configuration.GetConnectionString("VoeAirlines"));
-
-     }
-*/
 }
