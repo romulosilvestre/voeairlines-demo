@@ -35,12 +35,32 @@ public class AeronaveService{
     } 
 
 
-    public IEnumerable<ListarAeronaveViewModel> ListarAeronaves(){
-         
+    public IEnumerable<ListarAeronaveViewModel> ListarAeronaves(){         
          return _context.Aeronaves.Select(a=>new  ListarAeronaveViewModel(a.Id,a.Modelo,a.Tipo));
     }
+    
+     public DetalhesAeronaveViewModel? ListarAeronavePeloId(int id)
+    {
+        var aeronave = _context.Aeronaves.Find(id);
 
+        if (aeronave != null)
+        {
+            return new DetalhesAeronaveViewModel
+            (
+                aeronave.Id, 
+                aeronave.Fabricante, 
+                aeronave.Modelo, 
+                aeronave.Codigo,
+                aeronave.Tipo
+            );
+        }
 
+        return null;
+    }
 
+   
+        
+  
+  
 
 }
