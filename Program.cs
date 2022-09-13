@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<VoeAirlinesContext>();
 builder.Services.AddTransient<AeronaveService>();
+builder.Services.AddTransient<ManutencaoService>();
 
 var app = builder.Build();
 

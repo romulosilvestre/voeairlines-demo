@@ -1,6 +1,6 @@
 namespace VoeAirlines.Entities.Enums;
 
-public enum TipoManuntecao
+public enum TipoManutencao
 {
     Preventiva,
     Corretiva

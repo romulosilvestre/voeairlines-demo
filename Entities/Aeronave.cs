@@ -9,7 +9,8 @@ public class Aeronave{
             Tipo = tipo;
             
         }
-
+        
+        
         public int Id { get; set; }
         public string Fabricante { get; set; }
 
